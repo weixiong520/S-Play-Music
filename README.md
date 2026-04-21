@@ -38,8 +38,6 @@
 
 ## :computer: 配置开发环境
 
-本项目由 [NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi) 提供 API。
-
 运行本项目
 
 ```shell
@@ -56,7 +54,7 @@ yarn serve
 yarn electron:serve
 ```
 
-本地运行 NeteaseCloudMusicApi：
+本地运行 API：
 
 ```shell
 # 运行 API （默认 3000 端口）
