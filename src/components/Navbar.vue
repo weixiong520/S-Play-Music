@@ -158,7 +158,7 @@ export default {
       this.$router.push({ name: 'settings' });
     },
     toGitHub() {
-      window.open('https://github.com/qier222/YesPlayMusic');
+      window.open('https://github.com/weixiong520/S-Play-Music');
     },
     toLogin() {
       if (process.env.IS_ELECTRON === true) {
