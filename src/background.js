@@ -17,7 +17,7 @@ import {
   isCreateTray,
   isCreateMpris,
 } from '@/utils/platform';
-import { createProtocol } from 'vue-cli-plugin-electron-builder/lib/createProtocol';
+import createProtocol from 'vue-cli-plugin-electron-builder/lib/createProtocol';
 import { startNeteaseMusicApi } from './electron/services';
 import { initIpcMain } from './electron/ipcMain.js';
 import { createMenu } from './electron/menu';
@@ -101,8 +101,8 @@ class Background {
     log('initializing');
 
     // Make sure the app is singleton.
-    if (!app.requestSingleInstanceLock()) return app.quit();
-
+    const gotLock = app.requestSingleInstanceLock();
+    if (!gotLock) return app.quit();
     // start netease music api
     this.neteaseMusicAPI = startNeteaseMusicApi();
 

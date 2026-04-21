@@ -131,7 +131,7 @@ module.exports = {
               arch: ['x64'],
             },
           ],
-          publisherName: 'S Play Music',
+          publisherName: 'Savior',
           icon: 'build/icons/icon.ico',
           publish: ['github'],
         },
