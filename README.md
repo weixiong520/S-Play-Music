@@ -26,7 +26,7 @@
 - 🔐 支持 [UnblockNeteaseMusic](https://github.com/UnblockNeteaseMusic/server#音源清单)，自动使用[各类音源](https://github.com/UnblockNeteaseMusic/server#音源清单)替换变灰歌曲链接 （网页版不支持）
   - 「各类音源」指默认启用的音源。
   - YouTube 音源需自行安装 `yt-dlp`。
-- ~~✔️ 每日自动签到（手机端和电脑端同时签到）~~
+- ✔️ 每日自动签到（手机端和电脑端同时签到）
 - 🌚 Light/Dark Mode 自动切换
 - 👆 支持 Touch Bar
 - 🖥️ 支持 PWA，可在 Chrome/Edge 里点击地址栏右边的 ➕ 安装到电脑
