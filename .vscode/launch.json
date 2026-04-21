@@ -1,0 +1,46 @@
+{
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "S Play Music Electron 全量调试",
+      "configurations": ["S Play Music 主进程", "S Play Music 渲染进程"],
+      "stopAll": true
+    }
+  ],
+  "configurations": [
+    {
+      "name": "S Play Music 主进程",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "S Play Music 调试服务",
+      "runtimeExecutable": "${workspaceFolder}\\node_modules\\.bin\\electron.cmd",
+      "windows": {
+        "runtimeExecutable": "${workspaceFolder}\\node_modules\\.bin\\electron.cmd"
+      },
+      "args": ["--remote-debugging-port=9223", "./dist_electron"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "ELECTRON_RUN_AS_NODE": null
+      },
+      "outputCapture": "std",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "sourceMaps": true
+    },
+    {
+      "name": "S Play Music 渲染进程",
+      "type": "chrome",
+      "request": "attach",
+      "port": 9223,
+      "webRoot": "${workspaceFolder}",
+      "timeout": 30000,
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///./src/*": "${workspaceFolder}/src/*",
+        "webpack:///src/*": "${workspaceFolder}/src/*",
+        "webpack:///./~/*": "${workspaceFolder}/node_modules/*",
+        "webpack:///*": "${workspaceFolder}/*"
+      }
+    }
+  ]
+}
